@@ -4,7 +4,7 @@
 
 ### AWS Threat Detection & Incident Response Lab
 
-*Attack the Cloud. Trace the Signal. Prove the Incident — with 4 independent sources: CloudTrail, Linux, Windows & PCAPs. No single log is trusted.*
+*Attack the Cloud. Trace the Signal. Prove the Incident with 4 independent sources: CloudTrail, Linux, Windows & PCAPs. No single log is trusted.*
 
 </div>
 
