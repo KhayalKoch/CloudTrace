@@ -1,8 +1,14 @@
+<div align="center">
+
 # CloudTrace - AWS Threat Detection & Incident Response Lab
 
 **Attack the Cloud. Trace the Signal. Prove the Incident.**
 
 *Every alert is traced through four independent sources CloudTrail, Linux logs, Windows Events, and packet captures before it's called an incident.*
+
+</div>
+
+<div align="center">
 
 [![AWS](https://img.shields.io/badge/AWS-Lab-orange?logo=amazonaws&logoColor=white)]()
 [![Linux](https://img.shields.io/badge/OS-Linux-FCC624?logo=linux&logoColor=black)]()
@@ -15,11 +21,15 @@
 [![Windows](https://img.shields.io/badge/OS-Windows-0078D6?logo=windows&logoColor=white)]()
 [![Python](https://img.shields.io/badge/Automation-Python-3776AB?logo=python&logoColor=white)]()
 
+</div>
+
+---
+
 ## How It Works - From Attack to Report
 
 ![CloudTrace Architecture](architecture/cloudtrace-architecture.png)
 
-**Flow:** Attacker (Kali) -> AWS VPC (Linux + Windows + Network) -> Telemetry (CloudTrail, auth.log, Event IDs, PCAP) -> Wazuh SIEM -> SOC L1/L2 Playbooks -> Python Correlation Engine -> Incident Report + MITRE ATT&CK
+**The Flow:** My Kali machine attacks the isolated VPC. Every action leaves 4 traces: Linux logs, Windows Event IDs, raw PCAP, and AWS CloudTrail. Wazuh catches it, I triage it with L1/L2 playbooks, and my Python engine stitches it into a final incident report mapped to MITRE ATT&CK.
 
 ## What I Built & Proved
 
@@ -44,14 +54,14 @@
 
 ## The Arsenal
 
-**Cloud & IaC:** AWS (VPC, EC2, IAM, CloudTrail, CloudWatch) + Terraform - no ClickOps
+**Cloud & IaC:** AWS (VPC, EC2, IAM, CloudTrail, CloudWatch) + Terraform — no ClickOps
 **Endpoints:** Linux (auth.log, journalctl, ps, ss) + Windows (Event IDs 4624, 4625, 4688, 4672, 4720)
 **Network:** Nmap for recon, tcpdump for capture, Wireshark for deep dive
 **Detection:** Wazuh + Custom Sigma rules (my own, not just imported)
 **Automation:** Python (`cloudtrace.py` correlation engine)
 **Framework:** MITRE ATT&CK for every single finding
 
-## Repository Structure
+## System Structure
 
 ```
 cloudtrace-aws-incident-detection/
@@ -70,7 +80,7 @@ cloudtrace-aws-incident-detection/
 
 ## Try to Break & Prove It Yourself
 
-> ⚠️ **Warning:** CloudTrace deploys real AWS infrastructure and may incur AWS charges. Run it only in an AWS account you own and keep the environment isolated. Never test systems you do not own or have explicit authorization to test.
+>  **Warning:** CloudTrace deploys real AWS infrastructure and may incur AWS charges. Run it only in an AWS account you own and keep the environment isolated. Never test systems you do not own or have explicit authorization to test.
 
     git clone https://github.com/YOUR_USERNAME/cloudtrace-aws-incident-detection.git
     cd cloudtrace-aws-incident-detection/terraform
