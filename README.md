@@ -1,6 +1,8 @@
 <div align="center">
 
-# CloudTrace - AWS Threat Detection & Incident Response Lab
+# CloudTrace
+
+### AWS Threat Detection & Incident Response Lab
 
 **Attack the Cloud. Trace the Signal. Prove the Incident.**
 
