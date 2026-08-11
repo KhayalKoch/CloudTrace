@@ -4,9 +4,7 @@
 
 ### AWS Threat Detection & Incident Response Lab
 
-**Attack the Cloud. Trace the Signal. Prove the Incident.**
-
-*Every alert is traced through four independent sources CloudTrail, Linux logs, Windows Events, and packet captures before it's called an incident.*
+*Attack the Cloud. Trace the Signal. Prove the Incident — with 4 independent sources: CloudTrail, Linux, Windows & PCAPs. No single log is trusted.*
 
 </div>
 
